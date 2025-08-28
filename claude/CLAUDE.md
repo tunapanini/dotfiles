@@ -66,6 +66,16 @@ Links to related issues, PRs, or discussions.
 When this decision was made and documented.
 ```
 
+## Security Guidelines
+
+- **Pre-commit sensitive data check**: ALWAYS verify that no sensitive information is included in changes before commit and push
+  - Check for API keys, tokens, passwords, private keys
+  - Review environment variables and configuration files
+  - Scan for personal information, email addresses, or internal URLs
+  - Use `git diff --staged` to review all staged changes before committing
+- **Never commit secrets**: Ensure no secrets, keys, or credentials are committed to the repository
+- **Environment files**: Keep sensitive configurations in `.env` files and ensure they are in `.gitignore`
+
 ## Best Practices
 
 - **Use appropriate package manager**: Stick to the project's chosen package manager consistently

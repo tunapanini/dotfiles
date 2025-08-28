@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 CLAUDE_MD_SRC="${REPO_ROOT}/claude/CLAUDE.md"
 CLAUDE_MD_TARGET="${HOME}/CLAUDE.md"
 AGENTS_SRC="${REPO_ROOT}/claude/agents"
