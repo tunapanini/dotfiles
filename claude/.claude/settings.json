@@ -25,6 +25,7 @@
       "Read(~/Workspaces/**)",
       "Read(~/.claude/**)",
       "Read(~/CLAUDE.md)",
+      "WebSearch",
       "mcp__sequential-thinking__sequentialthinking",
       "mcp__github__list_pull_requests",
       "mcp__github__get_pull_request_diff",
