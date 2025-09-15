@@ -1,89 +1,39 @@
-# Global Claude Code Guidelines
+# SuperClaude Entry Point
 
-## Development Server Management
+This file serves as the entry point for the SuperClaude framework.
+You can add your own custom instructions and configurations here.
 
-- **Always run development servers in background**: Use `is_background: true` for `npm run dev`, `pnpm dev`, or `yarn dev` commands
-- **Don't wait for server startup**: Continue with other tasks while server is starting
-- **Port conflict resolution**: When starting a server and encountering port conflicts with 2 or more existing servers, kill port 3000 and try run server with that port again.
+The SuperClaude framework components will be automatically imported below.
 
-## Package Manager Selection
+## 개발 워크플로우 규칙
 
-- **Check package.json first**: Always refer to the project's `package.json` file to determine which package manager to use
-- **Priority order**:
-  1. Check for `packageManager` field in package.json
-  2. Look for lock files (pnpm-lock.yaml, yarn.lock, package-lock.json)
-  3. Default to npm if no clear indication
+### Linear 이슈 작업 시 브랜치 생성 규칙
+이슈 작업 시작 시에는 반드시 `feature/[이슈키]` 형태로 브랜치를 먼저 생성해야 합니다.
 
-## Documentation Standards
+예시: `feature/TP-72`, `feature/TP-73`
 
-- **Technical decisions documentation**: When making technical choices or feature changes, create documentation in `docs/` directory
-- **Document categorization**: Organize documents by category for better maintainability
+# ═══════════════════════════════════════════════════
+# SuperClaude Framework Components
+# ═══════════════════════════════════════════════════
 
-### Documentation Categories
+# Core Framework
+@BUSINESS_PANEL_EXAMPLES.md
+@BUSINESS_SYMBOLS.md
+@FLAGS.md
+@PRINCIPLES.md
+@RULES.md
 
-- **`docs/architecture/`**: System architecture decisions, design patterns, and structural changes
-- **`docs/features/`**: New feature implementations, user-facing changes, and functionality additions
-- **`docs/technical/`**: Technical decisions, library choices, performance optimizations, and refactoring
-- **`docs/migrations/`**: Database migrations, dependency updates, and breaking changes
-- **`docs/api/`**: API changes, endpoint modifications, and integration updates
-- **`docs/security/`**: Security-related changes, vulnerability fixes, and authentication updates
+# Behavioral Modes
+@MODE_Brainstorming.md
+@MODE_Business_Panel.md
+@MODE_Introspection.md
+@MODE_Orchestration.md
+@MODE_Task_Management.md
+@MODE_Token_Efficiency.md
 
-### Documentation Template
-
-```markdown
-# [Title of Change]
-
-## Overview
-
-Brief description of the change and its purpose.
-
-## Context
-
-Why this change was necessary and what problem it solves.
-
-## Technical Details
-
-- Specific implementation details
-- Code changes and patterns used
-- Configuration updates
-
-## Impact
-
-- What this change affects
-- Breaking changes (if any)
-- Migration steps (if needed)
-
-## Alternatives Considered
-
-Other approaches that were evaluated and why they weren't chosen.
-
-## Related Issues
-
-Links to related issues, PRs, or discussions.
-
-## Date
-
-When this decision was made and documented.
-```
-
-## Security Guidelines
-
-- **Pre-commit sensitive data check**: ALWAYS verify that no sensitive information is included in changes before commit and push
-  - Check for API keys, tokens, passwords, private keys
-  - Review environment variables and configuration files
-  - Scan for personal information, email addresses, or internal URLs
-  - Use `git diff --staged` to review all staged changes before committing
-- **Never commit secrets**: Ensure no secrets, keys, or credentials are committed to the repository
-- **Environment files**: Keep sensitive configurations in `.env` files and ensure they are in `.gitignore`
-
-## Best Practices
-
-- **Use appropriate package manager**: Stick to the project's chosen package manager consistently
-- **Background execution**: Run long-running processes in background to maintain workflow efficiency
-- **Context awareness**: Adapt to each project's specific setup and requirements
-- **Documentation first**: Create documentation before or alongside code changes
-- **Categorize properly**: Use appropriate category folders for better organization
-
-Always plan & respond in Korean.
-
-- Always respond in Korean.
+# MCP Documentation
+@MCP_Context7.md
+@MCP_Magic.md
+@MCP_Morphllm.md
+@MCP_Playwright.md
+@MCP_Serena.md

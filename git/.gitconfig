@@ -3,3 +3,6 @@
 	email = haneuneee@gmail.com
 [push]
 	autoSetupRemote = true
+
+[credential]
+	helper = store
