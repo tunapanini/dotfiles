@@ -37,3 +37,4 @@ The SuperClaude framework components will be automatically imported below.
 @MCP_Morphllm.md
 @MCP_Playwright.md
 @MCP_Serena.md
+- git push only when i tell you and check for github actions succeed.
