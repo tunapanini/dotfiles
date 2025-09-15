@@ -49,14 +49,17 @@
       "Bash(git restore:*)",
       "Bash(ls:*)",
       "Bash(tar:*)",
-      "Bash(readlink:*)"
+      "Bash(readlink:*)",
+      "mcp__github__get_pull_request",
+      "mcp__github__get_pull_request_files"
     ],
     "deny": [
       "Read(./.env)",
       "Read(./.env.*)",
       "Read(./secrets/**)",
       "Read(./config/credentials.json)",
-      "Read(./build)"
+      "Read(./build)",
+      "Bash(gh pr create:*)"
     ],
     "ask": [
       "Bash(chmod:*)",
