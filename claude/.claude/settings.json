@@ -56,7 +56,17 @@
       "Bash(git restore:*)",
       "Bash(ls:*)",
       "Bash(tar:*)",
-      "Bash(readlink:*)"
+      "Bash(readlink:*)",
+      "Bash(git pull:*)",
+      "Bash(brew install:*)",
+      "Bash(cat:*)",
+      "Bash(pwd:*)",
+      "Bash(whoami:*)",
+      "Bash(which:*)",
+      "Bash(echo:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)"
     ],
     "deny": [
       "Read(./.env)",
