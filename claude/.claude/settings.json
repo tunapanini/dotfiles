@@ -89,7 +89,8 @@
       "Bash(pnpm install:*)",
       "Bash(npm install:*)",
       "WebFetch",
-      "Bash(ln:*)"
+      "Bash(ln:*)",
+      "Bash(./*.sh:*)"
     ],
     "defaultMode": "acceptEdits"
   },
