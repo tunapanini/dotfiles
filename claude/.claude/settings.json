@@ -66,7 +66,14 @@
       "Bash(echo:*)",
       "Bash(grep:*)",
       "Bash(head:*)",
-      "Bash(tail:*)"
+      "Bash(tail:*)",
+      "Bash(mas list:*)",
+      "Bash(mas search:*)",
+      "Bash(mas account:*)",
+      "Bash(mas version:*)",
+      "Bash(sw_vers)",
+      "Bash(brew search:*)",
+      "Bash(brew list:*)"
     ],
     "deny": [
       "Read(./.env)",
@@ -90,7 +97,9 @@
       "Bash(npm install:*)",
       "WebFetch",
       "Bash(ln:*)",
-      "Bash(./*.sh:*)"
+      "Bash(./*.sh:*)",
+      "Bash(git rm:*)",
+      "Bash(git branch -d:*)"
     ],
     "defaultMode": "acceptEdits"
   },
