@@ -11,7 +11,6 @@
 869223134   KakaoTalk        # Korean messenger
 1661733229  LocalSend        # Local file sharing
 
-# Utilities
+# Utilities (Optional - uncomment to use)
 # 1295203466  Microsoft Remote Desktop
-# 441258766   Magnet           # Window management
 # 425424353   The Unarchiver   # Archive utility

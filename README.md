@@ -17,7 +17,7 @@ dotfiles/
 ├── scripts/
 │   ├── stow-setup.sh           # 통합 설정 스크립트 (Stow)
 │   ├── stow-teardown.sh        # 통합 해제 스크립트 (Stow)
-│   └── install-mas-apps.sh     # App Store 앱 설치 및 동기화
+│   └── install-apps.sh         # 🆕 macOS 앱 설치 (Brew Cask + App Store 상태 확인)
 └── macos/
     ├── default.sh              # macOS 설정
     └── appstore-apps.txt       # 🆕 App Store 앱 목록
@@ -55,23 +55,24 @@ stow -D git --target=$HOME
 stow -D claude --target=$HOME
 ```
 
-### 4. App Store 앱 관리 (macOS)
+### 4. macOS 앱 설치 관리
 
 ```bash
-# App Store 앱 설치
-./scripts/install-mas-apps.sh
+# 통합 앱 설치 스크립트 (추천)
+./scripts/install-apps.sh
 
-# 동기화 상태만 확인
-./scripts/install-mas-apps.sh sync
+# Brew Cask로 설치 가능한 앱: 자동 설치
+# App Store 전용 앱: 수동 설치 안내
 
-# 유용한 mas 명령어:
-mas list                  # 설치된 앱 목록
-mas search "앱이름"       # 앱 검색 (ID 찾기)
-mas install 123456789    # 특정 앱 설치
-mas outdated             # 업데이트 가능한 앱
-mas upgrade              # 모든 앱 업데이트
+# ⚠️ macOS Sequoia (15+) 제한사항:
+# - mas로 새 앱 설치 불가
+# - mas list (설치된 앱 확인)만 가능
+# - App Store 앱은 수동 설치 필요
 
-# 앱 목록 관리: macos/appstore-apps.txt 파일 편집
+# 유용한 명령어:
+brew search --cask "앱이름"    # Cask 앱 검색
+brew list --cask              # 설치된 Cask 앱
+mas list                      # 설치된 App Store 앱 (확인만)
 ```
 
 ### 5. 전체 해제
@@ -84,7 +85,8 @@ mas upgrade              # 모든 앱 업데이트
 
 - ✅ **Git 설정**
 - ✅ **Claude 설정**
-- ✅ **App Store 앱** (mas를 통한 자동 설치)
+- ✅ **Brew Cask 앱** (자동 설치)
+- ⚠️ **App Store 앱** (macOS 15+에서 수동 설치 필요)
 - 📝 **향후 추가 예정**: zsh, vim, ssh, Homebrew 패키지 등
 
 ## 🔧 트러블슈팅
