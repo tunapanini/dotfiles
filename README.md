@@ -15,12 +15,12 @@ dotfiles/
 │   │   └── settings.local.json # Claude 로컬 설정
 │   └── README.md
 ├── scripts/
-│   ├── stow-setup.sh           # 🆕 통합 설정 스크립트 (추천)
-│   ├── stow-teardown.sh        # 🆕 통합 해제 스크립트
-│   ├── link-claude.sh          # 기존 Claude 링크 스크립트 (호환성)
-│   └── unlink-claude.sh        # 기존 Claude 해제 스크립트 (호환성)
+│   ├── stow-setup.sh           # 통합 설정 스크립트 (Stow)
+│   ├── stow-teardown.sh        # 통합 해제 스크립트 (Stow)
+│   └── install-mas-apps.sh     # App Store 앱 설치 및 동기화
 └── macos/
-    └── default.sh              # macOS 설정
+    ├── default.sh              # macOS 설정
+    └── appstore-apps.txt       # 🆕 App Store 앱 목록
 ```
 
 ## 🚀 사용법
@@ -55,7 +55,26 @@ stow -D git --target=$HOME
 stow -D claude --target=$HOME
 ```
 
-### 4. 전체 해제
+### 4. App Store 앱 관리 (macOS)
+
+```bash
+# App Store 앱 설치
+./scripts/install-mas-apps.sh
+
+# 동기화 상태만 확인
+./scripts/install-mas-apps.sh sync
+
+# 유용한 mas 명령어:
+mas list                  # 설치된 앱 목록
+mas search "앱이름"       # 앱 검색 (ID 찾기)
+mas install 123456789    # 특정 앱 설치
+mas outdated             # 업데이트 가능한 앱
+mas upgrade              # 모든 앱 업데이트
+
+# 앱 목록 관리: macos/appstore-apps.txt 파일 편집
+```
+
+### 5. 전체 해제
 
 ```bash
 ./scripts/stow-teardown.sh
@@ -65,7 +84,8 @@ stow -D claude --target=$HOME
 
 - ✅ **Git 설정**
 - ✅ **Claude 설정**
-- 📝 **향후 추가 예정**: zsh, vim, ssh 등
+- ✅ **App Store 앱** (mas를 통한 자동 설치)
+- 📝 **향후 추가 예정**: zsh, vim, ssh, Homebrew 패키지 등
 
 ## 🔧 트러블슈팅
 

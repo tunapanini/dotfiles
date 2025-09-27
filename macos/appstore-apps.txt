@@ -1,0 +1,17 @@
+# App Store Apps List
+# Format: APP_ID  APP_NAME
+# Use 'mas search <app_name>' to find app IDs
+
+# Productivity
+937984704   Amphetamine       # Keep Mac awake
+640199958   Developer         # Apple Developer app
+497799835   Xcode            # Apple IDE
+
+# Communication
+869223134   KakaoTalk        # Korean messenger
+1661733229  LocalSend        # Local file sharing
+
+# Utilities
+# 1295203466  Microsoft Remote Desktop
+# 441258766   Magnet           # Window management
+# 425424353   The Unarchiver   # Archive utility
